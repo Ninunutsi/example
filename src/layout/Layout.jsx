@@ -1,6 +1,5 @@
 import React from "react";
 import { Outlet } from "react-router-dom";
-import sidebar from "../images/bg-sidebar-desktop.svg";
 
 const Layout = () => {
   return (

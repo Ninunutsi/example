@@ -4,7 +4,7 @@ import { useAuth } from "../context/AuthContext";
 import useLocalStorage from "../hooks/useLocalStorage";
 
 const PersonalInfo = () => {
-  const { auth, filled } = useAuth();
+  const { filled } = useAuth();
   const [personalInfo, setPersonalInfo] = useLocalStorage("personal", {
     name: "",
     email: "",
@@ -37,9 +37,9 @@ const PersonalInfo = () => {
   const addInLocalStorage = (e) => {
     const value = e.target.value;
     const id = e.target.id;
-    if (id == "name") {
+    if (id === "name") {
       setPersonalInfo((prevValue) => ({ ...prevValue, name: value }));
-    } else if (id == "email") {
+    } else if (id === "email") {
       setPersonalInfo((prevValue) => ({ ...prevValue, email: value }));
     } else if (id === "phone") {
       setPersonalInfo((prevValue) => ({ ...prevValue, phone: value }));
